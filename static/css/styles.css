@@ -1,0 +1,61 @@
+body{
+font-family:"Varela Round";
+text-align:center;
+background-color:#FFDCDC;
+color:#513927;
+}
+
+a{color:white;}
+
+.navbar{
+background-color:#CE97B0;
+margin-bottom: 0;
+}
+.title{
+font-size:5.5rem;
+font-weight:bolder;
+margin-bottom: 4rem;
+}
+.header{
+background-color:#FF9292;
+}
+.description{
+text-align: left;
+line-height:1.4;
+}
+
+.example{
+border-radius:5%;
+width:70%
+}
+
+.col-md-2{
+padding-left: 12%;
+padding-top:5%
+}
+
+.color{
+ border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color:white;
+
+}
+
+.color-text{
+padding-top: 40%;
+}
+.user-image{
+width:30%;
+border-radius:5%;
+}
+.row{
+padding:5% 20%;
+}
+footer{
+margin:5rem 6rem;
+    text-align:center;
+}
+.footer-icon{
+    padding: 10px;
+}

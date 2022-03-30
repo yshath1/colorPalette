@@ -1,0 +1,41 @@
+{% include "header.html" %}
+{%import "bootstrap/wtf.html" as wtf%}
+<body>
+
+<div class="header container-fluid">
+    <div class="row">
+        <h1 class="title">Welcome to Your Color Palette 🎨</h1>
+        <div class="col-md-4">
+            <h2 class="description">Upload Your Image to Obtain the Palettes and Generate the most 5 common colors in your picture!🥳</h2>
+        </div>
+        <div class="col-md-8">
+            <img class="example" src="{{url_for('static',filename='img/HJHS5252.JPG')}}" alt="An example image">
+        </div>
+    </div>
+</div>
+<section>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <h2>🧡 Five Color from the Example, Click to Copy! 🧡</h2>
+            {%for color in colors%}
+            <div class="col-md-2">
+                <input id="{{color}}" type="text" hidden>
+                <div class="color" style="background-color:{{color}}"><p onclick="Copy('{{color}}')" type="button"
+                                                                         class="btn color-text">{{color}}</p></div>
+            </div>
+            {%endfor%}
+
+        </div>
+        <div class="row">
+            <h2>Submit Your Picture Now!</h2>
+   <form class="form form-horizontal" method="post" enctype="multipart/form-data">
+                    {{ wtf.quick_form(form) }}
+            </form>
+
+        </div>
+</section>
+</body>
+
+{% include "footer.html" %}

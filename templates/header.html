@@ -1,0 +1,25 @@
+{% extends 'bootstrap/base.html' %}
+{%block styles%}
+{{super()}}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+{%endblock%}
+{%block title%}
+Color Palette 🎨
+{%endblock%}
+{% block content %}
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('home')}}"> <p>Color Palette 🎨</p>
+      </a>
+    </div>
+  </div>
+</nav>
+{%endblock%}

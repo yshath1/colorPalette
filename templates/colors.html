@@ -1,0 +1,18 @@
+{% include "header.html" %}
+            <h1>Five Color from Your Picture! Enjoy!✨</h1>
+
+<h2>💖 Your Image 💖:</h2>
+
+<div class="container-fluid">
+    <img class="user-image" src="{{url_for('static',filename=img)}}" alt="">
+    <div class="row">
+            {%for color in colors%}
+            <div class="col-md-2">
+                <input id="{{color}}" type="text" hidden>
+                <div class="color" style="background-color:{{color}}"><p onclick="Copy('{{color}}')" type="button"
+                                                                         class="btn color-text">{{color}}</p></div>
+            </div>
+            {%endfor%}
+        </div>
+
+{% include "footer.html" %}
