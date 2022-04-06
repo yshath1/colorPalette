@@ -35,7 +35,7 @@ def rgb_to_hex(rgb):
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("SecretKey")
+app.config['SECRET_KEY'] = SECRET_KEY
 app.config["IMAGE_UPLOADS"] = 'static/img/'
 Bootstrap(app)
 
